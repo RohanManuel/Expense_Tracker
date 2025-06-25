@@ -1,4 +1,4 @@
-# Expense Management System using MERN Stack
+# Expense Tracker
 
 ### Live Website: https://expense-tracker-swht.vercel.app/
 
