@@ -10,6 +10,7 @@ import { Button } from "react-bootstrap";
 import { setAvatarAPI } from "../../utils/ApiRequest.js";
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
+import "./avatar.css";
 
 // import Buffer from "buffer";
 const {

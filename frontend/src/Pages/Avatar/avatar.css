@@ -1,24 +1,104 @@
-.containerBox{
-    height: 100%;
+/* avatar.css */
+
+/* Container styling */
+.containerBox {
+  height: 100%;
+  background: rgba(15, 15, 20, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 2rem;
+  border: 1px solid rgba(138, 43, 226, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.avatarBox{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    flex-direction: column;
-
+/* Avatar container */
+.avatarBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
 }
 
-.avatar:hover{
-    border: 0.4rem solid blueviolet;
-
-    transition: 0.5s ease-in-out;
-    cursor: pointer;
+/* Avatar image styling */
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 0.4rem solid transparent;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
-.selected{
-    border: 0.4rem solid blueviolet !important; 
+.avatar:hover {
+  border-color: rgba(138, 43, 226, 0.7);
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(138, 43, 226, 0.3);
+  cursor: pointer;
 }
 
+/* Selected state */
+.selected {
+  border: 0.4rem solid rgba(138, 43, 226, 0.9) !important;
+  box-shadow: 0 0 0 0.25rem rgba(138, 43, 226, 0.25);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(138, 43, 226, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(138, 43, 226, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(138, 43, 226, 0);
+  }
+}
+
+/* Avatar label/text */
+.avatarLabel {
+  color: #ffffff;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .containerBox {
+    padding: 1.5rem;
+  }
+  
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .avatarBox {
+    gap: 1rem;
+    padding: 1rem;
+  }
+}
+
+/* Animation for container entrance */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.containerBox {
+  animation: fadeIn 0.6s ease-out forwards;
+}

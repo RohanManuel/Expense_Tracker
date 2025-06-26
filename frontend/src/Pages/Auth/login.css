@@ -1,0 +1,185 @@
+/* login.css */
+
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #000 !important;
+}
+
+/* Background animation */
+.login-page-container::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(75, 0, 130, 0.2) 0%, rgba(0, 0, 0, 1) 70%);
+  animation: rotate 20s linear infinite;
+  z-index: 1;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Form container */
+.login-form-container {
+  background: rgba(15, 15, 15, 0.85);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+}
+
+.login-form-container:hover {
+  box-shadow: 0 12px 40px rgba(75, 0, 130, 0.4);
+  border-color: rgba(75, 0, 130, 0.3);
+}
+
+/* Form elements */
+.form-label {
+  color: #e0e0e0 !important;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+.form-control {
+  background-color: rgba(30, 30, 30, 0.8) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #ffffff !important;
+  padding: 12px 15px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  background-color: rgba(40, 40, 40, 0.9) !important;
+  border-color: rgba(138, 43, 226, 0.6) !important;
+  box-shadow: 0 0 0 0.25rem rgba(138, 43, 226, 0.25) !important;
+}
+
+/* Button styles */
+.btnStyle {
+  background: linear-gradient(45deg, #8a2be2, #5f00a8) !important;
+  border: none !important;
+  padding: 12px 30px !important;
+  border-radius: 30px !important;
+  font-weight: 500 !important;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease !important;
+  min-width: 200px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btnStyle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(138, 43, 226, 0.3) !important;
+}
+
+.btnStyle:disabled {
+  background: linear-gradient(45deg, #5a3a7a, #3d0066) !important;
+  opacity: 0.8 !important;
+}
+
+.btnStyle::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(30deg);
+  transition: all 0.3s ease;
+}
+
+.btnStyle:hover::after {
+  left: 100%;
+}
+
+/* Link styles */
+.lnk {
+  text-decoration: none;
+  color: #b388ff !important;
+  font-weight: 300;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.lnk:hover {
+  color: #8a2be2 !important;
+}
+
+.lnk::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #8a2be2;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.lnk:hover::after {
+  transform: scaleX(1);
+}
+
+/* Text styles */
+.text-white {
+  color: #f5f5f5 !important;
+}
+
+h2 {
+  font-weight: 300;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #8a2be2, transparent);
+  margin: 10px auto 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .login-form-container {
+    padding: 1.5rem;
+  }
+  
+  .btnStyle {
+    padding: 10px 20px !important;
+    min-width: 150px;
+  }
+}
+
+/* Wallet icon animation */
+.wallet-icon {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

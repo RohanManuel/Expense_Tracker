@@ -1,0 +1,144 @@
+/* header.css */
+
+/* Navbar base styles */
+.navbarCSS {
+  background: rgba(15, 15, 15, 0.9) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(138, 43, 226, 0.2) !important;
+  padding: 0.8rem 2rem;
+  transition: all 0.3s ease;
+}
+
+.navbarCSS:hover {
+  border-bottom-color: rgba(138, 43, 226, 0.4) !important;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Brand title */
+.navTitle {
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  background: linear-gradient(45deg, #ffffff, #b388ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.navTitle:hover {
+  background: linear-gradient(45deg, #b388ff, #ffffff);
+}
+
+.navTitle::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background: linear-gradient(90deg, transparent, #8a2be2, transparent);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.navTitle:hover::after {
+  transform: scaleX(1);
+}
+
+/* Navigation buttons */
+.navbarCSS .btn {
+  border-radius: 30px !important;
+  padding: 8px 25px !important;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease !important;
+  position: relative;
+  overflow: hidden;
+  border: none !important;
+}
+
+.navbarCSS .btn-primary {
+  background: linear-gradient(45deg, rgba(138, 43, 226, 0.8), rgba(95, 0, 168, 0.8)) !important;
+}
+
+.navbarCSS .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(138, 43, 226, 0.4) !important;
+}
+
+/* Button animation */
+.navbarCSS .btn::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -60%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 255, 255, 0.1);
+  transform: rotate(30deg);
+  transition: all 0.3s ease;
+}
+
+.navbarCSS .btn:hover::after {
+  left: 100%;
+}
+
+/* Toggle button styles */
+.navbar-toggler {
+  transition: all 0.3s ease;
+}
+
+.navbar-toggler:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(138, 43, 226, 0.5);
+}
+
+/* Particles container */
+.particles-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .navbarCSS {
+    padding: 0.8rem 1rem;
+  }
+  
+  .navbar-collapse {
+    background: rgba(20, 20, 20, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 10px 10px;
+    padding: 1rem;
+    margin-top: 10px;
+    border: 1px solid rgba(138, 43, 226, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .navbarCSS .btn {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+/* Animation for navbar */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbarCSS {
+  animation: fadeInDown 0.5s ease-out;
+}

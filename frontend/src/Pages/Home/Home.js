@@ -216,8 +216,8 @@ const Home = () => {
                     onChange={handleSetType}
                   >
                     <option value="all">All</option>
-                    <option value="expense">Need</option>
-                    <option value="credit">Want</option>
+                    <option value="expense">Expense</option>
+                    <option value="credit">Credit</option>
                   </Form.Select>
                 </Form.Group>
               </div>
@@ -314,8 +314,8 @@ const Home = () => {
                           onChange={handleChange}
                         >
                           <option value="">Choose...</option>
-                          <option value="credit">Want</option>
-                          <option value="expense">Need</option>
+                          <option value="credit">Credit</option>
+                          <option value="expense">Expense</option>
                         </Form.Select>
                       </Form.Group>
 
@@ -406,3 +406,4 @@ const Home = () => {
 };
 
 export default Home;
+

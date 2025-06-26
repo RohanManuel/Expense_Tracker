@@ -1,0 +1,144 @@
+/* analytics.css */
+
+/* Main container styling */
+.analytics-container {
+  padding: 2rem 0;
+}
+
+/* Card styling */
+.analytics-card {
+  background: rgba(20, 20, 25, 0.85) !important;
+  backdrop-filter: blur(10px);
+  border-radius: 12px !important;
+  border: 1px solid rgba(138, 43, 226, 0.2) !important;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+  color: #ffffff;
+  height: 100%;
+}
+
+.analytics-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(138, 43, 226, 0.25);
+  border-color: rgba(138, 43, 226, 0.4) !important;
+}
+
+/* Card header styling */
+.analytics-card .card-header {
+  background: rgba(15, 15, 20, 0.95) !important;
+  border-bottom: 1px solid rgba(138, 43, 226, 0.3) !important;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  padding: 1rem 1.5rem;
+  color: #ffffff;
+  font-size: 1.1rem;
+}
+
+/* Card body styling */
+.analytics-card .card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.analytics-card .card-title {
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Income/Expense specific styling */
+.income-text {
+  color: #4caf50 !important;
+}
+
+.expense-text {
+  color: #f44336 !important;
+}
+
+/* Progress bar containers */
+.progress-container {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.circular-progress-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
+}
+
+/* Line progress bar container */
+.line-progress-container {
+  margin: 0.5rem 0;
+}
+
+/* Icon styling */
+.analytics-icon {
+  font-size: 1.2rem !important;
+  vertical-align: middle;
+}
+
+/* Category colors - matches your color scheme */
+.category-groceries { color: #FF6384; }
+.category-rent { color: #36A2EB; }
+.category-salary { color: #FFCE56; }
+.category-tip { color: #4BC0C0; }
+.category-food { color: #9966FF; }
+.category-medical { color: #FF9F40; }
+.category-utilities { color: #8AC926; }
+.category-entertainment { color: #6A4C93; }
+.category-transportation { color: #1982C4; }
+.category-other { color: #F45B69; }
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .analytics-card {
+    margin-bottom: 1.5rem;
+  }
+  
+  .circular-progress-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .analytics-container {
+    padding: 1rem;
+  }
+  
+  .analytics-card .card-header {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+  }
+  
+  .analytics-card .card-body {
+    padding: 1rem;
+  }
+}
+
+/* Animation for card entrance */
+@keyframes analyticsEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.col-lg-3 {
+  animation: analyticsEntrance 0.6s ease-out forwards;
+  animation-delay: calc(var(--order) * 0.1s);
+}
