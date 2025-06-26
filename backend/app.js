@@ -20,7 +20,7 @@ connectDB();
 
 // CORS configuration
 const allowedOrigins = [
-  "https://expense-tracker-app-three-beryl.vercel.app",
+  "https://expense-tracker-swht.vercel.app",
   "http://localhost:3000",
 ];
 
