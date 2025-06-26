@@ -185,8 +185,8 @@ const TableData = (props) => {
                 onChange={handleChange}
               >
                 <option value="">{editingTransaction?.[0]?.transactionType || "Select type"}</option>
-                <option value="Credit">Credit</option>
-                <option value="Expense">Expense</option>
+                <option value="credit">Credit</option>
+                <option value="expense">Expense</option>
               </Form.Select>
             </Form.Group>
 
